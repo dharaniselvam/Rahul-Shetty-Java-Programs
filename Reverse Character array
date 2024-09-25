@@ -1,0 +1,12 @@
+import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Set;
+//Reverse character array
+public class Main {
+    public static void main(String[] args) {
+        char[] ch = {'a','e','i','o','u'};
+        for(int i=ch.length-1; i>=0;i--)
+            System.out.print(ch[i]+ " ");
+    }    
+    
+}
