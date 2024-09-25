@@ -1,0 +1,16 @@
+import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Set;
+//Swap numbers without new variable
+public class Main {
+    public static void main(String[] args) {
+        int n1 = 20;
+        int n2 = 10;
+        n1 = n1+n2;
+        n2 = n1-n2;
+        n1 = n1-n2;
+        System.out.println(n1);
+        System.out.println(n2);
+    }    
+    
+}
