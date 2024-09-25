@@ -1,0 +1,37 @@
+import java.util.Scanner;
+import java.util.HashMap;
+//returns character count using hashmap
+public class Main {
+    public static void main(String[] args) {
+        HashMap<Character, Integer> hash_map = new HashMap<>();
+        String str = "Rahul Shetty";
+		char[] strarray = str.toCharArray();
+		
+// 		for (int i = str.length() - 1; i >= 0; i--)   
+// 		{  
+// 		if(hash_map.containsKey(str.charAt(i)))   
+// 		{  
+// 		int count = hash_map.get(str.charAt(i));  
+// 		hash_map.put(str.charAt(i), ++count);  
+// 		}   
+// 		else   
+// 		{  
+// 		hash_map.put(str.charAt(i),1);  
+// 		}  
+
+        for (char c : strarray) {
+            if (hash_map.containsKey(c)) {
+            hash_map.put(c, hash_map.get(c) + 1);
+            }
+            
+            else {
+            hash_map.put(c, 1);
+            }
+
+        
+
+		}  
+		System.out.println(hash_map);
+    }
+    
+}
