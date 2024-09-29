@@ -1,0 +1,26 @@
+import java.util.Scanner;
+import java.util.Stack;
+// Reverse a number using Stack
+public class Main {
+    public static void main(String[] args) {
+        int n = 1234;
+        Stack<Integer> st = new Stack<>();
+        
+        while(n!=0){
+            st.push(n%10);
+            n=n/10;
+        }
+        
+        int reverse = 0, i=1;
+        
+        while(!st.isEmpty()){
+            reverse=reverse+ (st.peek()*i);
+            i=i*10;
+            st.pop();
+        }
+        
+        System.out.println(reverse);
+        
+        
+    }
+}
