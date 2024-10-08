@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.util.HashMap;
+// print 1 to 100 without using loops
+public class Main {
+    
+    public static void main(String[] args) {
+        printnum(1);
+        
+    }
+    
+    public static void printnum(int num) {
+        if (num <= 100) {
+            System.out.println(num);
+            num++;
+            printnum(num);
+
+        }
+
+    }
+}
+
