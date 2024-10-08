@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Arrays;
+// Return count of unique elements in an array
+public class Main {
+    
+    public static void main(String[] args) {
+        int[] array = { 3, 2, 1, 1, 2, 2, 3, 2, 1, 3 };
+        System.out.println(removeDupElements(array));
+    }
+    
+    public static int removeDupElements(int a[]) {
+        Arrays.sort(a);
+        if(a.length==0)
+            return 0;
+        int j=0;
+        for(int i=1;i<a.length;i++){
+            if(a[i]!=a[j]){
+                j++;
+                a[j] = a[i];
+                
+            }
+        }
+        return j+1;
+    }
+}
+
