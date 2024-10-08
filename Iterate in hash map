@@ -1,0 +1,33 @@
+import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
+import java.util.Arrays;
+// Iterate in hash map
+public class Main {
+    
+    public static void main(String[] args) {
+        HashMap<String,String> hash_map = new HashMap<>();
+        hash_map.put("India", "New Delhi");
+        hash_map.put("France", "Paris");
+        hash_map.put("Germany", "Berlin");
+        hash_map.put("Australia", "Canberra");
+        
+        //iterate using keySet()
+        Iterator<String> it = hash_map.keySet().iterator();
+        while(it.hasNext()){
+            String key = it.next();
+            String value = hash_map.get(key);
+            System.out.println("key: " +key+" value: "+value);
+        }
+        System.out.println("**************************");
+        
+        //Iterate using entrySet()
+        Iterator<Entry<String, String>> map_key = hash_map.entrySet().iterator();
+        while(map_key.hasNext()){
+            Entry<String,String> entry = map_key.next();
+            System.out.println("key: " +entry.getKey()+" value: "+entry.getValue());
+        }
+    }
+}
+
